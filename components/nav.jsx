@@ -14,10 +14,6 @@ import { usePathname
         path:'/offert'
     },
     {
-        name:'portfolio', 
-        path:'/portfolio'
-    },
-    {
         name:'resume', 
         path:'/resume'
     },

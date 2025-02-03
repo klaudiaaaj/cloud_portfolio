@@ -8,6 +8,7 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ['latin'],
   weight: ['100', '200', '300', '400', '500', '600', '700'],
   variable: '--font-jetbrains-mono',
+  display: "swap",
 })
 
 const geistSans = localFont({
@@ -29,7 +30,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={jetbrainsMono.className}
+      style={{fontFamily: "'JetBrains Mono', monospace"}}
       >
       <Header/>
       <PageTransistion>

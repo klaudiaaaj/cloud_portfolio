@@ -11,7 +11,13 @@ body {
     text-wrap: balance;
   }
 }
-
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/fonts/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -93,7 +99,7 @@ body {
     -webkit-text-stroke: 1px #ffffff;
   }
   .text-outline-hover{
-    -webkit-text-stroke: 1px #00ff99;
+    -webkit-text-stroke: 1px #b00b5d;
   }
     .semi-muted-foreground {
       color: hsl(240, 5%, 64.9%);
