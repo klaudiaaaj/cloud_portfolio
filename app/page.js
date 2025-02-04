@@ -1,8 +1,8 @@
 import { ButtonCon } from "@/components/ui/buttonCon";
 import {FiDownload} from "react-icons/fi"
 import SocialMedia from './../components/socialMedia';
-import HeaderPhoto from '@/components/headerPhoto';
 import { Statistics } from "@/components/Statistics";
+import {HeaderPhoto} from '@/components/HeaderPhoto';
 export default function Home() {
   return (
 <section className="h-full">
