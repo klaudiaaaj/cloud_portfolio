@@ -1,6 +1,6 @@
 "use client"
 
-import { ButtonCon } from '@/components/ui/ButtonCon'
+import { ButtonCon } from '@/components/ui/buttonCon'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import {Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue} from '@/components/ui/select'

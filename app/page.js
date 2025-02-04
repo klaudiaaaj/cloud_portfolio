@@ -1,8 +1,7 @@
-import { Button } from "@/components/ui/button";
 import { ButtonCon } from "@/components/ui/buttonCon";
 import {FiDownload} from "react-icons/fi"
 import SocialMedia from './../components/socialMedia';
-import HeaderPhoto from './../components/headerPhoto';
+import HeaderPhoto from '../components/headerPhoto';
 import { Statistics } from "@/components/Statistics";
 export default function Home() {
   return (
