@@ -16,7 +16,7 @@ export default function Home() {
           I am a Full Stack Developer with a passion for creating beautiful and functional websites. I have also great experience in DevOps faculty. Check my page and leave ur contact!    </p>
          <div className="flex gap-8 flex-col xl:flex-row items-center">
           <ButtonCon variant='outline'>
-          <span href='/cloud_pofolio/assets/CV.pdf'> Download CV </span>
+          <a href='/assets/CV.pdf' downloads="CV-Klaudia Janecka.pdf"> Download CV </a>
             <FiDownload />
           </ButtonCon>
           <div className='mb-8 xl:mb-0'> 
