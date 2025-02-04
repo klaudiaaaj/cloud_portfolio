@@ -11,7 +11,7 @@ export default function Home() {
     <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
       <div className="text-center xl:text-left order-2 xl:order-none ">
         <span> Software Developer</span>
-          <h1 className='h1 mb-6'> Hello I'am <br/> <span className="text-accent"> Klaudia Janecka </span> </h1>
+          <h1 className='h1 mb-6'> Hello I&apos;am <br/> <span className="text-accent"> Klaudia Janecka </span> </h1>
           <p className="max-w-[500px] mb-9 text-white/80">
           I bring a comprehensive approach to building scalable and efficient systems” refers to the diverse skill set implied by the listed designation
           </p>
