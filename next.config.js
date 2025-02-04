@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: "export",  // <=== enables static exports
+let nextConfig = {
   reactStrictMode: true,
-  basePath: '/cloudy-portoflio',
-  assetPrefix: '/cloud_portfolio/',  // <=== add this line
 };
+
+if (process.env.NODE_ENV !== 'development') {
+  nextConfig = {
+    ...nextConfig,
+    output: "export", 
+    assetPrefix: '/cloud_portfolio/',  
+    basePath: '/cloudy-portoflio',
+  };
+}
 
 module.exports = nextConfig;
