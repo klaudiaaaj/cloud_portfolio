@@ -8,7 +8,6 @@ if (process.env.NODE_ENV !== 'development') {
     ...nextConfig,
     output: "export", 
     assetPrefix: 'https://klaudiaaaj.github.io/cloud_portfolio/',  
-    basePath: '/cloudy-portoflio',
   };
 }
 
