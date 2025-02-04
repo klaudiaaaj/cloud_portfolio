@@ -18,7 +18,7 @@ function HeaderPhoto() {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src="/assets/photo_empty_bg.png"
+            src={process.env.NODE_ENV === 'development' ? '/assets/photo_empty_bg.png' : '/cloud_portfolio/assets/photo_empty_bg.png'}  // Ensure the path is correct
             priority
             quality={100}
             fill
