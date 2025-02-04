@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+
 function HeaderPhoto() {
   return (
     <div className="w-full h-full relative justify-center items-center">
@@ -17,7 +18,7 @@ function HeaderPhoto() {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src="/assets/photo_empty_bg.png"
+            src="/cloud_portfolio/assets/photo_empty_bg.png"
             priority
             quality={100}
             fill
