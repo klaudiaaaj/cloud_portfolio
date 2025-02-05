@@ -1,6 +1,12 @@
+const { linkedinIn, github } = require('fontawesome');
+
 /** @type {import('next').NextConfig} */
 let nextConfig = {
   reactStrictMode: true,
+  publicRuntimeConfig: {
+    linkedinInLink: 'https://www.linkedin.com/in/klaudia-janecka/', 
+    githubLink: 'https://github.com/klaudiaaaj'
+    },
 };
 
 if (process.env.NODE_ENV !== 'development') {
@@ -12,4 +18,4 @@ if (process.env.NODE_ENV !== 'development') {
   };
 }
 
-module.exports = nextConfig;
+module.exports = nextConfig;  

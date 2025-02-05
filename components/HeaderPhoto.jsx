@@ -2,9 +2,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { getAssetUrl } from '../lib/utils';
 
 function HeaderPhoto() {
-  return (
+  const photoUrl = getAssetUrl('/assets/photo_empty_bg.png');
+  return (  
     <div className="w-full h-full relative justify-center items-center">
       <motion.div
       
@@ -13,12 +15,12 @@ function HeaderPhoto() {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
+            transition: { delay: 1, duration: 0.4, ease: "easeInOut" },
           }}
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
         >
           <Image
-            src={process.env.NODE_ENV === 'development' ? '/assets/photo_empty_bg.png' : '/cloud_portfolio/assets/photo_empty_bg.png'}  // Ensure the path is correct
+            src={photoUrl}
             priority
             quality={100}
             fill

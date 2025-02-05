@@ -9,14 +9,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  import { faHtml5, faCss3, faJs, faReact, faNodeJs, faFigma, faGithub } from '@fortawesome/free-brands-svg-icons';
  import { faDatabase } from '@fortawesome/free-solid-svg-icons';
- const CustomFaIcon = ({ name }) => {
-  const FaIcon = Icons[FaHtml5];
-
-  if (!FaIcon) return <p>Icon not found!</p>;
-
-  return <FaIcon />;
-};
-
+ 
 const aboutme =
 {
   title: "About Me",

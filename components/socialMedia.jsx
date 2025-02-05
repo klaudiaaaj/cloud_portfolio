@@ -1,11 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
 import {FaGithub, FaLinkedinIn} from 'react-icons/fa'
+import getConfig from 'next/config'
 
-
+const { publicRuntimeConfig } = getConfig()
 const socials =[
-    {icon: <FaGithub />,  path:""},
-    {icon: <FaLinkedinIn />,  path:""},
+    {icon: <FaGithub />,  path:`${publicRuntimeConfig.githubLink}`},
+
+    {icon: <FaLinkedinIn />,  path:publicRuntimeConfig.linkedinInLink},
 
 ]
 const SocialMedia = ({containerStyles, iconStyles}) => {
@@ -13,7 +15,7 @@ const SocialMedia = ({containerStyles, iconStyles}) => {
     <div className={containerStyles}>
         {socials.map((item, index)=> {
             return(
-            <Link key={index} href={item.path} className={iconStyles}>
+            <Link key={index} href={item.path} className={iconStyles} target="_blank" rel="noopener noreferrer">
                 {item.icon}
                 </Link>
         )})}
