@@ -8,6 +8,8 @@ import {Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigg
 import React from 'react'
 import {FaPhoneAlt, FaEnvelope, FaMapMarkedAlt} from "react-icons/fa"
 import { motion } from 'framer-motion'
+import getConfig from 'next/config'
+const { publicRuntimeConfig } = getConfig()
 
 const info =[
   {
@@ -39,7 +41,8 @@ return(
 <div className='container mx-auto'>
 <div className='flex flex-col xl:flex-row gap-[30px]'>
   <div className='xl:h-[60%] xl:w-[54%] order-2 xl:order-none'>
-    <form className='flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl'>
+    <form className='flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl' action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value={publicRuntimeConfig.web3FormsKey}>
       <h3 className='text-4xl text-accent'>Let&apos;s connect!</h3>
       <p className="text-white/60">Please leave Yours contact details and message to me.  </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -71,6 +74,7 @@ return(
       <ButtonCon size="md" className="max-w-40">
       Send Message
     </ButtonCon>
+    </input>
     </form>
 
   </div> 
