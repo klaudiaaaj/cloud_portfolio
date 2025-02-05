@@ -10,8 +10,8 @@ const links=[
         path:'/'
     },
     {
-        name:'offer', 
-        path:'/offer'
+        name:'offert', 
+        path:'/offert'
     },
     {
         name:'resume', 
