@@ -44,14 +44,15 @@ return(
 <div className='flex flex-col xl:flex-row gap-[30px]'>
   <div className='xl:h-[60%] xl:w-[54%] order-2 xl:order-none'>
     <form className='flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl' action="https://api.web3forms.com/submit" method="POST">
-        <inpu type="hidden" name="access_key" value={publicRuntimeConfig.web3FormsKey}/>
-      <h3 className='text-4xl text-accent'>Let&apos;s connect!</h3>
+    <Input type="hidden" name="access_key" value="a2d5cd21-d9b7-4b1c-80c0-01553da086a8"/>
+    <Input type="hidden" name="redirect" value="https://web3forms.com/success"/>
+    <h3 className='text-4xl text-accent'>Let&apos;s connect!</h3>
       <p className="text-white/60">Please leave Yours contact details and message to me.  </p>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <Input type="firstname" placeholder="Firstname"/>
-        <Input type="surname" placeholder="Surname"/>
-        <Input type="email" placeholder="Email Address"/>
-        <Input type="Phone" placeholder="Phone Number"/>
+        <Input name="first_name" placeholder="Firstname"/>
+        <Input name="surname_name" placeholder="Surname"/>
+        <Input name="email" placeholder="Email Address"/>
+        <Input name="Phone" placeholder="Phone Number"/>
       </div>
       <Select>
         <SelectTrigger className="w-full">
@@ -77,18 +78,6 @@ return(
       Send Message
     </ButtonCon>
     </form>
-    <form action="https://api.web3forms.com/submit" method="POST">
-
-<input type="hidden" name="access_key" value="a2d5cd21-d9b7-4b1c-80c0-01553da086a8"/>
-
-<input type="text" name="name" required/>
-<input type="email" name="email" required/>
-<textarea name="message" required></textarea>
-<input type="hidden" name="redirect" value="https://web3forms.com/success"/>
-
-<button type="submit">Submit Form</button>
-
-</form>
 
   </div> 
   <div className='flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0'>
