@@ -9,7 +9,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  import { faHtml5, faCss3, faJs, faReact, faNodeJs, faFigma, faGithub } from '@fortawesome/free-brands-svg-icons';
  import { faDatabase } from '@fortawesome/free-solid-svg-icons';
- 
+
 const aboutme =
 {
   title: "About Me",
@@ -23,7 +23,7 @@ const aboutme =
       value: "+48 573 188 607"
     }, {
       fieldname: "LinkedIn",
-      value: "Klaudia"
+      value: "klaudia-janecka"
     }, {
       fieldname: "GitHub",
       value: "klaudiaaaj"
@@ -44,26 +44,20 @@ const experience = {
   description: "I have experience in building web applications using React, Node.js, and MongoDB. I have also worked with various technologies such as HTML, CSS, JavaScript, and Figma. I am a quick learner and always eager to learn new technologies.",
   items: [
     {
-      company: "Opensky data systems",
-      position: ".NET Developer",
-      duration: "2021 - 2022",
-      description: "I worked as a .NET Developer at Opensky data systems. I was responsible for developing and maintaining web applications using .NET technologies. I also worked on various projects using HTML, CSS, and JavaScript."
-    },
-    {
       company: "Diebold Nixdorf",
       position: "Cloud developer/DevOps",
       duration: "2024 - Present",
       description: "I worked as a .NET Developer at Opensky data systems. I was responsible for developing and maintaining web applications using .NET technologies. I also worked on various projects using HTML, CSS, and JavaScript."
     },
     {
-      company: "CreateCtrl",
-      position: "Junior .NET Developer",
+      company: "Opensky data systems",
+      position: ".NET Developer",
       duration: "2021 - 2022",
       description: "I worked as a .NET Developer at Opensky data systems. I was responsible for developing and maintaining web applications using .NET technologies. I also worked on various projects using HTML, CSS, and JavaScript."
     },
     {
-      company: "Opensky data systems",
-      position: ".NET Developer",
+      company: "CreateCtrl",
+      position: "Junior .NET Developer",
       duration: "2021 - 2022",
       description: "I worked as a .NET Developer at Opensky data systems. I was responsible for developing and maintaining web applications using .NET technologies. I also worked on various projects using HTML, CSS, and JavaScript."
     },

@@ -5,96 +5,107 @@ import { motion } from "framer-motion";
 
 const servicesGiven = [
   {
-    num: 8,
-    title: "Web Page Design and Development",
+    num: 1,
+    title: "Custom Website Development",
     description:
-      "Creation of visually appealing and user-friendly web pages using HTML, CSS, and JavaScript. Customization of designs and layouts to match your brand identity.",
+      "Creating modern and fully functional websites tailored to your business needs. Includes backend and frontend development, domain setup, and deployment.",
+    href: "",
+  },
+  {
+    num: 2,
+    title: "Web Application Development",
+    description:
+      "Building dynamic and scalable web applications with complex functionalities, database integration, and business logic processing to support interactive user experiences.",
+    href: "",
+  },
+  {
+    num: 3,
+    title: "Website Moderations",
+    description:
+      "Enhancing existing websites by adding new features, modifing existing ones and improving code structure to ensure fast loading times and security.",
+    href: "",
+  },
+  {
+    num: 4,
+    title: "Domain Management and Hosting",
+    description:
+      "Handling domain registration, configuration, and hosting to ensure a secure and stable online presence for your business.",
+    href: "",
+  },
+  {
+    num: 5,
+    title: "Application and Website Migration",
+    description:
+      "Seamlessly transferring websites and applications to new domains or servers with minimal downtime and no impact on SEO rankings.",
+    href: "",
+  },
+  {
+    num: 6,
+    title: "Infrastructure Development and Optimizations",
+    description:
+      "Designing, scaling, and optimizing IT infrastructure, including server architecture, cloud solutions, and performance tuning to support growing business demands.",
+    href: "",
+  },
+  {
+    num: 7,
+    title: "Mobile App Development",
+    description:
+      "Developing native and cross-platform mobile applications for Android and iOS, ensuring smooth performance and seamless user experience.",
+    href: "",
+  },
+  {
+    num: 8,
+    title: "AI Integration for Applications",
+    description:
+      "Implementing artificial intelligence to automate processes, analyze data, and enhance user experiences in web and mobile applications.",
     href: "",
   },
   {
     num: 9,
-    title: "Responsive Web Design",
+    title: "Database Development and SQL Optimization",
     description:
-      "Development of mobile-friendly and responsive web pages that adapt to different screen sizes and devices, ensuring a seamless user experience across all platforms.",
+      "Designing and optimizing database structures, writing efficient SQL queries, and improving database performance for fast and reliable applications.",
     href: "",
-  },
-  {
-    num: 10,
-    title: "E-commerce Web Development",
-    description:
-      "Design and development of e-commerce websites with integrated payment gateways, product management systems, and secure checkout processes.",
-    href: "",
-  },
-  {
-    num: 11,
-    title: "Content Management Systems (CMS)",
-    description:
-      "Implementation of CMS platforms such as WordPress, Drupal, or Joomla to provide easy content management and updates for your website.",
-    href: "",
-  },
-  {
-    num: 12,
-    title: "Search Engine Optimization (SEO)",
-    description:
-      "Optimization of your website for search engines to improve visibility and organic search rankings, driving more traffic to your website.",
-    href: "",
-  },
-  {
-    num: 13,
-    title: "Web Analytics and Reporting",
-    description:
-      "Setup and analysis of web analytics tools to track website performance, user behavior, and conversion rates, providing valuable insights for business decisions.",
-    href: "",
-  },
-  {
-    num: 14,
-    title: "Website Maintenance and Support",
-    description:
-      "Ongoing maintenance and support to ensure your website remains secure, up-to-date, and running smoothly, including bug fixes and performance improvements.",
-    href: "",
-  },
-];
+  }
+]
+
 function offert() {
   return (
-    <section>
-      <div className="container mx-auto">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: { delay: 0.2, duration: 0.4, ease: "easeInOut" },
-          }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4"
-        >
-          {servicesGiven.map((item, index) => {
-            return (
-              <div
-                key={index}
-                className=" flex-1 flex flex-col justify-center group gap-6"
-              >
-                <div className="flex justify-between items-center w-full">
-                  <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
-                    {" "}
-                    {item.num}
-                  </div>
-                  <Link
-                    href={item.href}
-                    className="w-[50px] h-[50px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center
-                    hover:-rotate-45"
-                  >
-                    <BsArrowDownRight className="text-primary text-3xl" />
-                  </Link>
+    <section className="py-14">
+        <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+            <div className="relative max-w-2xl mx-auto sm:text-center">
+                <div className="relative z-10">
+                    <h3 className="text-3xl text-accent font-semibold sm:text-4xl">
+                        Services I Provide
+                    </h3>
+                    <p className="mt-3 text-accent">
+                      If you dont see what you need, feel free to contact me and ask for a custom service.
+                    </p>
                 </div>
-                <h2 className="font-semibold text-[30px] leading-none group-hover:text-accent transition-all duration-500">{item.title}</h2>
-                <p className="text-white/60">{item.description}</p>
-                <div className="border-b border-white/20 w-full"></div>
-              </div>
-            );
-          })}
-        </motion.div>
-      </div>
+                <div className="absolute inset-0 max-w-xs mx-auto h-44 blur-[118px] gradient-bg"></div>
+            </div>
+            <div className="relative mt-12">
+                <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    {
+                        servicesGiven.map((item, idx) => (
+                            <li key={idx} className="bg-white space-y-3 p-4 border rounded-lg">
+                                <div className="text-indigo-600 pb-3">
+                                    {/* {item.icon} */}
+                                </div>
+                                <h4 className="text-lg text-gray-800 font-semibold">
+                                    {item.title}
+                                </h4>
+                                <p>
+                                    {item.description}
+                                </p>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
     </section>
-  );
+)
 }
 
 export default offert;
