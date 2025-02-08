@@ -54,7 +54,7 @@ return(
         <Input name="email" placeholder="Email Address"/>
         <Input name="Phone" placeholder="Phone Number"/>
       </div>
-      <Select>
+      {/* <Select>
         <SelectTrigger className="w-full">
           <SelectValue  placeholder="Select a service" />
         </SelectTrigger>
@@ -70,7 +70,7 @@ return(
               <SelectItem value ="op6"> Other </SelectItem>
           </SelectGroup>
         </SelectContent>
-      </Select>
+      </Select> */}
       <Textarea className="h-[200px] w-full rounded-md border-white/10 bg-primary px-4 py-5 text-base placeholder:text-white/60 focus:border-accent/50 outline-none focus-visible:ring-offset-0 disabled-cursor-not-allowed disabled:opacity-50"
       placeholder="Type here your message">
       </Textarea>
@@ -84,14 +84,16 @@ return(
   <ul className='flex flex-col gap-10'>
     {info.map((item, index) => {
       return (
-        <li key={index} className='flex items-start gap-6 xl:flex-row'>
+        <li key={index} className=' flex items-start gap-6 xl:flex-row'>
           <div className='w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] text-[28px] bg-[#27272c] text-accent rounded-md flex items-center justify-center'>
         {item.icon}
           </div>
-          <div className='flex-1 flex flex-col xl:items-start'>
-            <p className='text-white/50'>{item.title}</p>
-            <h3 className='text-xl xl:ml-0'>{item.value}</h3>
-          </div>
+          <div className='flex-1 flex flex-col xl:items-start w-full self-start'>
+          <p className='text-white/50'>{item.title}</p>
+          <h3 className='xl:text-xl  xl:ml-0 break-words whitespace-normal w-full text-left max-w-[400px]'>
+            {item.value}
+          </h3>
+        </div>
         </li>
       );
     })}

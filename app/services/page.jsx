@@ -69,10 +69,10 @@ const servicesGiven = [
   }
 ]
 
-function offert() {
+function services() {
   return (
     <section className="">
-        <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+        <div className="max-w-screen  px-4 text-gray-600 md:px-8">
             <div className=" max-w-2xl mx-auto sm:text-center">
                 <div className>
                     <h1 className="text-3xl text-white/90 font-semibold sm:text-4xl">
@@ -92,7 +92,7 @@ function offert() {
                                 <div className="text-indigo-900 px-3">
                                     {/* {item.icon} */}
                               
-                                <h3 className="text-lg text-white/90 font-semibold pb-2">
+                                <h3 className="text-lg text-accent font-semibold pb-2">
                                     {item.title}
                                 </h3>
                                 <p className="text-white/60">
@@ -109,4 +109,4 @@ function offert() {
 )
 }
 
-export default offert;
+export default services;

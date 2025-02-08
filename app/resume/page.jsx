@@ -10,34 +10,29 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
  import { faHtml5, faCss3, faJs, faReact, faNodeJs, faFigma, faGithub } from '@fortawesome/free-brands-svg-icons';
  import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 
-const aboutme =
-{
+const aboutme = {
   title: "About Me",
   Description: "I am a Full Stack Developer with a passion for creating beautiful and functional websites. I have experience in building web applications using React, Node.js, and MongoDB. I am also proficient in HTML, CSS, and JavaScript. I am a quick learner and always eager to learn new technologies. I am currently looking for a full-time position as a Full Stack Developer.",
   info: [
     {
       fieldname: "Name",
       value: "Klaudia Janecka"
-    }, {
+    },
+    {
       fieldname: "Phone number",
       value: "+48 573 188 607"
-    }, {
+    },
+    {
       fieldname: "LinkedIn",
       value: "klaudia-janecka"
-    }, {
+    },
+    {
       fieldname: "GitHub",
       value: "klaudiaaaj"
-    },
-    {
-      fieldname: "Email",
-      value: "klaudiaaa.janecka@gmail.com"
-    },
-    {
-      fieldname: "Location",
-      value: "Katowice, Poland"
-    },
+    }
   ]
-}
+};
+
 const experience = {
   icon: '/assets/resume/badge.svg',
   title: "Experience",
@@ -82,16 +77,16 @@ const experience = {
 const education = {
   icon: '/assets/resume/education.svg',
   title: "Education",
-  description: "I have a Master's degree in Computer Science from Politechnika Śląska. During my studies, I gained a strong foundation in software development, algorithms, and data structures. I also worked on various projects using technologies such as React, Node.js, and MongoDB.",
+  description: "I have a Master's degree in Computer Science from Silesian University of Technology. During my studies, I gained a strong foundation in software development, algorithms, and data structures. I also worked on various projects using technologies such as React, Node.js, and MongoDB.",
   items: [
     {
-      institution: "Politechnika Śląska w Gliwicach",
+      institution: "Silesian University of Technology",
       degree: "Bachelor's in Computer Science",
       duration: "2019 - 2022",
       description: "I completed my Bachelor's degree in Computer Science, where I focused on software development, algorithms, and data structures. I also worked on various projects using technologies such as React, Node.js, and MongoDB."
     },
     {
-      institution: "Politechnika Śląska w Gliwicach",
+      institution: "Silesian University of Technology",
       degree: "Master's in Computer Science",
       duration: "2022 - 2024",
       description: "I completed my Master's degree in Computer Science, where I focused on software development, algorithms, and data structures. I also worked on various projects using technologies such as React, Node.js, and MongoDB."
@@ -117,42 +112,52 @@ const skills = {
   ],
 }
 
-function resume() {
+const Resume = () => {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{
-      opacity: 1,
-      transition: { duration: 0.4, delay: 1, ease: "easeIn" }
-    }} className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { duration: 0.4, delay: 1, ease: "easeIn" }
+      }}
+      className="min-h-[80vh] flex xl:items-center xl:justify-center py-12 xl:py-0"
+    >
       <div className="container mx-auto">
-        <Tabs
-          defaultValue="aboutme"
-          className="flex flex-col xl:flex-row gap-[60px]">
-          <TabsList className="text-white/90 flex flex-col w-full max-w-[300px] mx-auto xl:mx-0 gap-6">
+        <Tabs defaultValue="aboutme" className="flex flex-col xl:flex-row gap-[60px]">
+          <TabsList className="text-white/90 flex flex-col w-full sm:w-full xl:max-w-[300px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="aboutme">About Me</TabsTrigger>
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
           </TabsList>
           <div className="min-h-[80vh] w-full">
-            <TabsContent value="aboutme" className="w-full text-center xl:text-left"> 
+            <TabsContent value="aboutme" className="w-full text-center xl:text-left">
               <div className="flex flex-col gap-6 text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{aboutme.title}</h3>
-                <p className="text-lg text-white/60 mx-auto xl:mx-0">{aboutme.Description}</p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 text-left mx-auto xl:mx-0 max-w-[820px]">
+                <p className="text-lg text-white/60 mx-auto xl:mx-0 sm:max-w-[550px]">{aboutme.Description}</p>
+                <ul className="grid xl:grid-cols-2 gap-y-6 text-left mx-0 sm:justify-between sm:mx-auto xl:mx-0 max-w-[820px]">
                   {aboutme.info.map((info, index) => {
                     return (
-                      <li key={index} className="flex justify-center items-center gap-4 xl:justify-start">
+                      <li key={index} className="flex sm:justify-between xl:items-center gap-4 xl:justify-start">
                         <span className="text-accent">{info.fieldname}</span>
-                        <span>{info.value}</span>
+                        {info.fieldname === "LinkedIn" ? (
+                          <a href={`https://www.linkedin.com/in/${info.value}`} target="_blank" rel="noopener noreferrer" className="text-blue-500">
+                            {info.value}
+                          </a>
+                        ) : info.fieldname === "GitHub" ? (
+                          <a href={`https://github.com/${info.value}`} target="_blank" rel="noopener noreferrer" className="text-blue-500">
+                            {info.value}
+                          </a>
+                        ) : (
+                          <span>{info.value}</span>
+                        )}
                       </li>
                     );
                   })}
                 </ul>
-
               </div>
-
-            </TabsContent>    
-            <TabsContent value="experience">
+            </TabsContent>
+            <TabsContent value="experience" className="w-full text-center xl:text-left">
               <div className="flex flex-col gap-6 text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{experience.title}</h3>
                 <p className="text-lg text-white/60">{experience.description}</p>
@@ -171,8 +176,8 @@ function resume() {
                </ScrollArea>
               </div>
             </TabsContent>
-            <TabsContent value="education">
-            <div className="flex flex-col gap-6 text-center xl:text-left">
+            <TabsContent value="education" className="w-full text-center xl:text-left">
+              <div className="flex flex-col gap-6 text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{education.title}</h3>
                 <p className="text-lg text-white/60">{education.description}</p>
                 <ScrollArea className="h-[400px]">
@@ -190,7 +195,7 @@ function resume() {
                </ScrollArea>
               </div>
             </TabsContent>
-            <TabsContent value="skills">
+            <TabsContent value="skills" className="w-full text-center xl:text-left">
               <div className="flex flex-col gap-6 text-center xl:text-left">
               <h3 className="text-4xl font-bold">{skills.title}</h3>
               <p className="text-lg text-white/60">{skills.description}</p>
@@ -206,8 +211,8 @@ function resume() {
           </div>
         </Tabs>
       </div>
-    </motion.div>
-  )
-}
+    </motion.section>
+  );
+};
 
-export default resume;
+export default Resume;

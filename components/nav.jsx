@@ -10,8 +10,8 @@ import { usePathname
         path:'/'
     },
     {
-        name:'offert', 
-        path:'/offert'
+        name:'services', 
+        path:'/services'
     },
     {
         name:'resume', 
