@@ -95,22 +95,19 @@ const education = {
 }
 
 const skills = {
-  icon: '/assets/resume/skills.svg',
   title: "Skills",
-  description: "I have a strong foundation in software development, algorithms, and data structures. I also worked on various projects using technologies such as React, Node.js, and MongoDB.",
-
-   skillslist:[
-    { name: "HTML", icon: faHtml5 },
-    { name: "CSS", icon: faCss3 },
+  description: "Here are some of my skills:",
+  skillslist: [
+    { name: "HTML5", icon: faHtml5 },
+    { name: "CSS3", icon: faCss3 },
     { name: "JavaScript", icon: faJs },
     { name: "React", icon: faReact },
     { name: "Node.js", icon: faNodeJs },
-    { name: "MongoDB", icon: faDatabase },
     { name: "Figma", icon: faFigma },
     { name: "GitHub", icon: faGithub },
-    // Add more skills as needed
-  ],
-}
+    { name: "Database", icon: faDatabase }
+  ]
+};
 
 const Resume = () => {
   return (
@@ -135,10 +132,10 @@ const Resume = () => {
               <div className="flex flex-col gap-6 text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{aboutme.title}</h3>
                 <p className="text-lg text-white/60 mx-auto xl:mx-0 sm:max-w-[550px]">{aboutme.Description}</p>
-                <ul className="grid xl:grid-cols-2 gap-y-6 text-left mx-0 sm:justify-between sm:mx-auto xl:mx-0 max-w-[820px]">
+                <ul className="grid xl:grid-cols-2 gap-y-6 text-xl text-center xl:text-left mx-0 sm:justify-between sm:mx-auto xl:mx-0 max-w-[820px]">
                   {aboutme.info.map((info, index) => {
                     return (
-                      <li key={index} className="flex sm:justify-between xl:items-center gap-4 xl:justify-start">
+                      <li key={index} className="flex flex-col sm:flex-row sm:justify-between xl:items-center gap-4 xl:justify-start">
                         <span className="text-accent">{info.fieldname}</span>
                         {info.fieldname === "LinkedIn" ? (
                           <a href={`https://www.linkedin.com/in/${info.value}`} target="_blank" rel="noopener noreferrer" className="text-blue-500">
@@ -197,16 +194,16 @@ const Resume = () => {
             </TabsContent>
             <TabsContent value="skills" className="w-full text-center xl:text-left">
               <div className="flex flex-col gap-6 text-center xl:text-left">
-              <h3 className="text-4xl font-bold">{skills.title}</h3>
-              <p className="text-lg text-white/60">{skills.description}</p>
-              <ul className="grid lg:grid-cols-3 sm:grid-cols-2 gap-6 text-3xl xl:text-left">
-            {skills.skillslist.map((skill, index) => (
-              <li key={index}>
-                <FontAwesomeIcon icon={skill.icon} className="text-accent"/> {skill.name}
-              </li>
-            ))}
-          </ul>
-          </div>
+                <h3 className="text-4xl font-bold">{skills.title}</h3>
+                <p className="text-lg text-white/60">{skills.description}</p>
+                <ul className="grid lg:grid-cols-3 sm:grid-cols-2 gap-6 text-3xl text-center xl:text-left">
+                  {skills.skillslist.map((skill, index) => (
+                    <li key={index} className="flex justify-center xl:justify-start">
+                      <FontAwesomeIcon icon={skill.icon} className="text-accent" /> {skill.name}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
