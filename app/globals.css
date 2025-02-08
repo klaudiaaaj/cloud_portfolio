@@ -81,7 +81,7 @@ body {
     @apply border-border;
   }
   body {
-    @apply  bg-primary gradient-bg text-white font-primary leading-loose ;
+    @apply  bg-primary  text-white font-primary leading-loose ;
     height: 100vh;
     z-index: -1; /* Sends it to the background */
 
