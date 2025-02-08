@@ -71,14 +71,14 @@ const servicesGiven = [
 
 function offert() {
   return (
-    <section className="py-14">
+    <section className="">
         <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
-            <div className="relative max-w-2xl mx-auto sm:text-center">
-                <div className="relative z-10">
-                    <h3 className="text-3xl text-accent font-semibold sm:text-4xl">
+            <div className=" max-w-2xl mx-auto sm:text-center">
+                <div className>
+                    <h1 className="text-3xl text-white/90 font-semibold sm:text-4xl">
                         Services I Provide
-                    </h3>
-                    <p className="mt-3 text-accent">
+                    </h1>
+                    <p className="mt-3 text-xl text-white/70">
                       If you dont see what you need, feel free to contact me and ask for a custom service.
                     </p>
                 </div>
@@ -88,16 +88,17 @@ function offert() {
                 <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                     {
                         servicesGiven.map((item, idx) => (
-                            <li key={idx} className="bg-white space-y-3 p-4 border rounded-lg">
-                                <div className="text-indigo-600 pb-3">
+                            <li key={idx} className="bg-[#27272c] space-y-3 p-4 rounded-lg">
+                                <div className="text-indigo-900 px-3">
                                     {/* {item.icon} */}
-                                </div>
-                                <h4 className="text-lg text-gray-800 font-semibold">
+                              
+                                <h3 className="text-lg text-white/90 font-semibold pb-2">
                                     {item.title}
-                                </h4>
-                                <p>
+                                </h3>
+                                <p className="text-white/60">
                                     {item.description}
                                 </p>
+                                </div>
                             </li>
                         ))
                     }

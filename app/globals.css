@@ -81,7 +81,10 @@ body {
     @apply border-border;
   }
   body {
-    @apply bg-primary text-white font-primary leading-loose;
+    @apply  bg-primary gradient-bg text-white font-primary leading-loose ;
+    height: 100vh;
+    z-index: -1; /* Sends it to the background */
+
   }
   .h1{
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
@@ -106,7 +109,12 @@ body {
       opacity: 0.5; /* lub inna wartość opacity */
     }
     .gradient-bg {
-      background: linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.26) 34.2%, rgba(192, 132, 252, 0.1) 77.55%);
-      filter: blur(118px);
+      background: linear-gradient(152.92deg, #1c1c22 10%, rgba(152, 9, 177, 0.223) 23%, rgba(126, 43, 210, 0.1) 77%);
+       /* filter: blur(118px); */
+       z-index: -1; /* Sends it to the background */
+       /* position: absolute; */
+       background-attachment: fixed;
+
+       
     } 
 }
