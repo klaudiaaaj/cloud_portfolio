@@ -127,7 +127,7 @@ function resume() {
         <Tabs
           defaultValue="aboutme"
           className="flex flex-col xl:flex-row gap-[60px]">
-          <TabsList className="flex flex-col w-full max-w-[300px] mx-auto xl:mx-0 gap-6">
+          <TabsList className="text-white/90 flex flex-col w-full max-w-[300px] mx-auto xl:mx-0 gap-6">
             <TabsTrigger value="aboutme">About Me</TabsTrigger>
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
