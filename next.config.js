@@ -5,7 +5,7 @@ let nextConfig = {
   reactStrictMode: true,
   publicRuntimeConfig: {
     linkedinInLink: 'https://www.linkedin.com/in/klaudia-janecka/', 
-    githubLink: 'https://github.com/klaudiaaaj', 
+    githubLink: 'https://github.com/klaudiaaaj/klaudiajanecka', 
     web3FormsKey: 'a2d5cd21-d9b7-4b1c-80c0-01553da086a8'
     },
 };

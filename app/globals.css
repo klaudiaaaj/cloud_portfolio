@@ -109,7 +109,7 @@ body {
       opacity: 0.5; /* lub inna wartość opacity */
     }
     .gradient-bg {
-      background: linear-gradient(350.92deg, #1c1c22 10%, #303034 23%, #1c1c22 67%);
+      background: linear-gradient(160.92deg, #1c1c22 10%, #303034cc 33%, #1c1c22 57%);
        /* filter: blur(118px); */
        z-index: -1; /* Sends it to the background */
        /* position: absolute; */
