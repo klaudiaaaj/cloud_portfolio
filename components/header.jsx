@@ -3,9 +3,11 @@ import Link from 'next/link'
 import Nav from './nav'
 import { ButtonCon } from './ui/buttonCon'
 import MobileNav from './MobileNav'
-
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+    
+
   return (
     <header className='py-8 xl:py-12 text-white '>
     <div className="container mx-auto flex justify-between items-center">
@@ -17,7 +19,10 @@ function Header() {
       </Link>
       <div className="hidden xl:flex gap-8 items-center">
         <Nav />
-        <ButtonCon >Hire me</ButtonCon>
+        <ButtonCon  >
+        <Link href="/contact" className="btn btn-primary"> HIRE ME</Link>
+
+        </ButtonCon>
       </div>
       {/* Mobile nav */}
       <div className='xl:hidden'> 
