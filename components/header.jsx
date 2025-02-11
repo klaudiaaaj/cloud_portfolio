@@ -21,7 +21,6 @@ function Header() {
         <Nav />
         <ButtonCon  >
         <Link href="/contact" className="btn btn-primary"> HIRE ME</Link>
-
         </ButtonCon>
       </div>
       {/* Mobile nav */}
